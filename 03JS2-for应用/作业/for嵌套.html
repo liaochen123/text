@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script>
+window.onload = function(){
+    var oUl = document.getElementById('list');
+    var aUl = oUl.getElementsByTagName('ul');
+    var len = aUl.length;
+    var aLi = num;//空
+
+    for(var i =0; i<len;i++){
+        aLi = aUl[i].getElementsByTagName('li');
+        for(var j = 0;j<aLi.length;j++){
+            aLi[j].style.border = '1px solid red';
+        }
+    }
+}
+    </script>
+</head>
+<body>
+<ul id="list">
+    <li>
+        <h2>我的好友</h2>
+        <ul>
+            <li>好友1</li>
+            <li>好友2</li>
+            <li>好友3</li>
+        </ul>
+    </li>
+    <ol><li>no</li></ol><ol><li>no</li></ol><ol><li>no</li></ol>
+    <li>
+        <h2>我的坏友</h2>
+        <ul>
+            <li>好友4</li>
+            <li>好友5</li>
+            <li>好友6</li>
+        </ul>
+    </li>
+    <li>
+        <h2>我的黑名单</h2>
+        <ul>
+            <li>好友7</li>
+            <li>好友8</li>
+            <li>好友9</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

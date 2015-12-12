@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+
+    <style type="text/css">
+        html,body{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: hidden;
+        }
+        #content,#one,#two{
+            position: absolute;
+            /*width: 320px;*/
+            /*height: 568px;*/
+            left: 0;
+            top: 0;
+        }
+        canvas{
+            position: absolute;
+            /*width: 320px;*/
+            /*height: 568px;*/
+            left: 0;
+            top: 0;
+        }
+        #one{
+            z-index: 1;
+        }
+        #two {
+            z-index: 2;
+        }
+
+        #erasure-icon{
+            position: absolute;
+            width: 10%;
+            top: 40%;
+            left: 30%;
+            z-index: 999999;
+            -webkit-animation: erasure-icon-show 2s linear infinite;
+        }
+
+        /*圆圈旋转*/
+        @-webkit-keyframes erasure-icon-show{
+            0%{
+
+        }
+        100%{
+                left: 35%;
+                /*top: 40%;*/
+                -webkit-transform:rotate(-5deg);
+            }
+            50%{
+                left: 55%;
+                /*top: 35%;*/
+                -webkit-transform:rotate(45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <img id="one" src="images/erase-bg.jpg" />
+    <img id="two" src="images/erase-img.png" />
+    <img id="erasure-icon" src="images/erasure-icon.png" alt=""/>
+</div>
+<script src='js/jquery.eraser.js'></script>
+<script src="js/zepto.min.js"></script>
+<!--<script src="js/jquery.min.js"></script>-->
+<script type = "text/javascript">
+
+    var ww = $(window).width();
+    var wh = $(window).height();
+    //        alert(ww+'+'+wh)
+
+
+    $('#content,#one,#two,canvas').css({
+        width: ww+'px',
+        height: wh+'px'
+    })
+
+    addEventListener( "load", init, false );
+    function init( event ) {
+        $("#two").eraser();
+    }
+    function remove(event) {
+        $("#two").eraser('clear');
+        event.preventDefault();
+    }
+    function reset(event) {
+        $("#two").eraser('reset');
+        event.preventDefault();
+    }
+    function grow(event) {
+        $("#two").eraser("size",1);
+        event.preventDefault();
+    }
+
+    $(window).on('touchstart',function(){
+        $('#erasure-icon').remove();
+    });
+
+
+    /*------------------------------------------------------------------------------------------------------------------*/
+    /*滑动的时候切换一个页面*/
+    var xx,yy,XX,YY,swipeX,swipeY ;
+    document.addEventListener('touchstart',function(event){
+        xx = event.targetTouches[0].screenX ;
+        yy = event.targetTouches[0].screenY ;
+
+    });
+    document.addEventListener('touchmove',function(event){
+        XX = event.targetTouches[0].screenX ;
+        YY = event.targetTouches[0].screenY ;
+        if((YY-yy)<0&& (Math.abs(XX-xx)<Math.abs(YY-yy)))
+        {
+            /*跳转的地址-通过服务器地址传送*/
+            window.location.href="../../jiuGongGe.html";
+        }
+    });
+    /*滑动的时候切换一个页面*/
+
+    /*------------------------------------------------------------------------------------------------------------------*/
+</script>
+</body>
+</html>

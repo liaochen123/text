@@ -1,0 +1,409 @@
+/*.hide {*/
+    /*display: none;*/
+/*}*/
+*{
+    margin:0;
+    padding:0;
+}
+#main{ width:640px; height:1008px; position:relative; overflow:hidden;}
+#list{}
+#list > li{ width:100%; height:100%; position:absolute; left:0; top:0; background-size:cover;}
+#list > li:nth-of-type(1){background-image:url(../img/bj01.png); background-repeat: no-repeat;}
+/*background-position: center;*/
+/*background-repeat: no-repeat;*/
+/*body{*/
+    /*width:100%;*/
+    /*overflow:hidden;*/
+/*}*/
+.page{
+    width:100%;
+    height:100%;
+    position:  relative;/*父极的相对定位*/
+}
+/*第1页元素--------------------------------------------------------------------------*/
+.page-1-1 .tu1 {
+    width: 146px;
+    height: 5px;
+    position: absolute;
+    top: 379px;
+    left: -150px;
+    -webkit-animation: myleft 3s 0.3s forwards 1;
+}
+.page-1-1 .tu2 {
+    width: 146px;
+    height: 5px;
+    position: absolute;
+    top: 426px;
+    right: -150px;
+    -webkit-animation: myright 3s 0.3s forwards 1;
+}
+.page-1-1 .tu3 {
+    width: 5px;
+    height: 146px;
+    position: absolute;
+    left: 293px;
+    top: -150px;
+    -webkit-animation: mydwon 3s 0.3s forwards 1;
+}
+.page-1-1 .tu4 {
+    width: 5px;
+    height: 146px;
+    position: absolute;
+    left: 341px;
+    bottom: -150px;
+    -webkit-animation: myshang 3s 0.3s forwards 1;
+}
+@-webkit-keyframes myleft
+{
+    from {left:-150px;}
+    to {left:700px;opacity: 0;}
+}
+@-webkit-keyframes myright
+{
+    from {right:-150px;}
+    to {right:700px;opacity: 0;}
+}
+@-webkit-keyframes mydwon
+{
+    from {top:-150px;}
+    to {top:1200px;opacity: 0;}
+}
+@-webkit-keyframes myshang
+{
+    from {bottom:-150px;}
+    to {bottom:1200px;opacity: 0;}
+}
+.page-1-1 .tu5 {
+    width: 238px;
+    height: 175px;
+    position: absolute;
+    left: 200px;
+    top: 420px;
+    display: none;
+}
+.page-1-1 .tu6 {/*火星*/
+    width: 223px;
+    height: 488px;
+    position: absolute;
+    left: 206px;
+    top: 1122px;/* top: 1080px;*/
+    z-index: 9;
+}
+/*.page-1-1 .tu7 {*/
+    /*width: 160px;*/
+    /*height: 368px;*/
+    /*position: absolute;*/
+    /*left: 236px;*/
+    /*top: 1120px;*/
+    /*z-index: 8;*/
+    /*-webkit-animation: myshang1  infinite linear 1s;     /!*火箭尾巴*!//!* 闪烁效果*!/*/
+    /*-webkit-animation: expand 0.4s 0.83333s ease-out infinite;/!*火箭尾巴*!/*/
+/*}*/
+.page-1-1 .tu8 {/*彗星*/
+    width: 223px;
+    height: 488px;
+    position: absolute;
+    left: 206px;
+    bottom: 1122px;
+    z-index: 9;
+}
+/*.page-1-1 .tu9 {*/
+    /*width: 210px;*/
+    /*height: 522px;*/
+    /*position: absolute;*/
+    /*left: 200px;*/
+    /*bottom: 1200px;*/
+    /*z-index: 8;*/
+    /*-webkit-animation: myshang1  infinite linear 1s;     /!*彗星尾巴*!//!* 闪烁效果*!/*/
+    /*-webkit-animation: expand 0.4s 0.83333s ease-out infinite;/!*彗星尾巴*!/*/
+/*}*/
+
+
+/*@-webkit-keyframes myshang1 {       /!*火箭尾巴*!/       /!* 闪烁效果*!/*/
+    /*0%{opacity: 0;}*/
+    /*100%{opacity: 1;}*/
+/*}*/
+/*/!*火箭尾巴*!/*/
+/*@-webkit-keyframes expand {*/
+    /*0% {*/
+        /*opacity: 0;*/
+    /*}*/
+    /*12% {*/
+        /*transform: scale(1);*/
+        /*opacity: 0.3;*/
+    /*}*/
+    /*22% {*/
+        /*opacity: 0.6;*/
+    /*}*/
+    /*100% {*/
+        /*transform: scale(4);*/
+        /*opacity: 0;*/
+    /*}*/
+/*}*/
+/*/!*火箭尾巴*!/*/
+
+.tu10{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -60px;
+    margin-top: -60px;
+    display: none;
+    /*中间小方块旋转动画*/
+    animation:8s linear infinite xuanzhuanMove;
+    -webkit-animation:8s linear infinite xuanzhuanMove;
+}
+/*中间小方块旋转*/
+@keyframes xuanzhuanMove{
+    0%{ transform:rotate(0deg);}
+    100%{ transform:rotate(360deg);}
+}
+@-webkit-keyframes xuanzhuanMove{
+    0%{ -webkit-transform:rotate(0deg);}
+    100%{ -webkit-transform:rotate(360deg);}
+}
+/*中间小方块旋转*/
+
+.tu11{
+    width: 640px;
+    height: 1008px;
+    position: absolute;
+    left: 0px;
+    top: 58px;
+    margin:  0 auto;
+    display: none;
+    /*闪动*/
+    -webkit-animation: myshandong 4 linear .8s;
+}
+@-webkit-keyframes myshandong { /*闪动*/
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+ }
+.tu12{
+    width: 84px;
+    height: 72px;
+    position: absolute;
+    left: 34px;
+    bottom: 50px;
+    display: none;
+}
+.tu13{
+    width: 84px;
+    height: 72px;
+    position: absolute;
+    right: 34px;
+    bottom: 50px;
+    display: none;
+}
+.tu14{
+    width: 99px;
+    height: 99px;
+    position: absolute;
+    left: 272px;
+    top: 320px;
+    opacity: 0.8;/*曝光透明度*/
+    -webkit-transform: scale(0);
+    display: none;
+}
+/*放大*/
+.tu14Active{
+    -webkit-animation: myscale 1s ease-in forwards;
+}
+@-webkit-keyframes myscale {
+    0% {
+        -webkit-transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(40.02);
+    }
+}
+/*放大*/
+/*手势*/
+.push{
+    width: 55px;
+    height: 75px;
+    position: absolute;
+    left: 272px;
+    top: 644px;
+    display: none;
+    -webkit-animation: shang 1.5s ease  infinite;
+}
+@-webkit-keyframes shang{
+    0% { -webkit-transform: translateX(-50%); opacity:0;}
+    50% { -webkit-transform: translateX(0%); opacity:1;}
+    100% { -webkit-transform: translateX(50%); opacity:0;}
+}
+/*手势*/
+
+/*大魔方元素--------------------------------------------------------------------------*/
+
+/*@-webkit-keyframes myxiaowu{*/
+    /*0%{ transform:scale(1.2);}*/
+    /*100%{ transform:scale(0);}*/
+/*}*/
+
+@-webkit-keyframes myshan {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+.wrap{
+    height: 100%;
+    position: relative;
+    top: 500px;/*3D魔方向下移动*/
+    -webkit-transform-style:preserve-3d;
+    -webkit-perspective:0px;
+    -moz-transform-style:preserve-3d;
+    -moz-perspective:0px;
+}
+.wrap2{
+    -webkit-animation:mydhua 6s ease-in forwards;/*魔方旋转*/
+    -moz-animation:mydhua 6s ease-in forwards;/*魔方旋转*/
+}
+
+.box{
+	width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 48px;
+    color: white;
+    opacity: 0;
+    -webkit-animation:myshan 3s 1s  ease forwards;/*魔方淡入*/
+}
+.box1{
+    -webkit-transform:rotatey(90deg) translatez(-100px);
+    -moz-transform:rotatey(90deg) translatez(-100px);
+    background: url("../img/f.png") no-repeat;
+    background-size: cover;
+}
+.box2{
+    -webkit-transform:rotatey(90deg) translatez(100px);
+    -moz-transform:rotatey(90deg) translatez(100px);
+    background: url("../img/f2.png") no-repeat;
+    background-size: cover;
+}
+.box3{
+    -webkit-transform:rotatex(90deg) translatez(100px);
+    -moz-transform:rotatex(90deg) translatez(100px);
+    background: url("../img/f3.png") no-repeat;
+    background-size: cover;
+}
+.box4{
+    -webkit-transform:rotatex(90deg) translatez(-100px);
+    -moz-transform:rotatex(90deg) translatez(-100px);
+    background: url("../img/f.png") no-repeat;
+    background-size: cover;
+}
+.box5{
+    -webkit-transform: translatez(-100px);
+    -moz-transform:translatez(-100px);
+    background: url("../img/f2.png") no-repeat;
+    background-size: cover;
+}
+.box6{
+    -webkit-transform: translatez(100px);
+    -moz-transform:translatez(100px);
+    background: url("../img/f3.png") no-repeat;
+    background-size: cover;
+}
+@-webkit-keyframes mydhua{
+
+    0%{
+        -webkit-transform:rotateX(0deg) rotateY(0deg) scale3d(1,1,1);
+    }
+    100%{
+        -webkit-transform:rotateX(540deg) rotateY(540deg) scale3d(0,0,0);
+    }
+}
+/*大魔方元素end--------------------------------------------------------------------------*/
+
+/*<!--点击我们弹出来的页面---------------------------------------------------------------------------->*/
+#main1{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left: 0;
+    top: 0;
+	z-index: 10;
+    overflow:hidden;
+    display: none;
+    background: rgba(0,0,0,0.8);
+}
+
+.guanbi{
+    width: 47px;
+    height: 47px;
+    position: absolute;
+    top: 40px;
+    left: 560px;
+    background-image: url("../img/guanbi.png");
+}
+
+/*<!--点击我们弹出来的页面---------------------------------------------------------------------------->*/
+
+.iW{ width: 100%; height: 100%; position: relative;}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-wrapper{ width: 1500px; height: 100%;}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /*background: #fff;*/
+    background-color: rgba(10%,20%,30%,0.5);
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    float: left;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-pagination{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    text-align: center;
+}
+.swiper-pagination .swiper-pagination-bullet{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: #2c3317;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+.swiper-pagination .swiper-pagination-bullet-active{
+    background: #ffaa27;
+}
+
+
+
+
+
+
+
+
+

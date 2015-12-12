@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>判断</title>
+    <style>
+        #content{
+            width: 400px;
+            height: 400px;
+            border: 10px solid #898989;
+            margin: 40px auto 0;
+            position: relative;
+            background: #f1f1f1;
+        }
+        #content a {
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border: 5px solid #fff;
+            position: absolute;
+            top: 175px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 40px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            filter:alpha(opacity:40);
+            opacity:0.4;
+        }
+        #content a:hover {
+            filter:alpha(opacity:90);
+            opacity:0.9;
+        }
+        #prev{
+            left: 10px;
+        }
+        #next{
+            right: 10px;
+        }
+        #text{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 400px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: #000;
+            filter:alpha(opacity:80);
+            opacity:0.8;
+            margin: 0;
+        }
+        #span1{
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: #000;
+            filter:alpha(opacity:80);
+            opacity:0.8;
+            margin: 0;
+            position: absolute;
+        }
+        #img1{
+            width: 400px;
+            height: 400px;
+        }
+        #anniu{
+            width: 400px;
+            height: 30px;
+            margin: 0 auto 0;
+            position: relative;
+            text-align: center;
+        }
+
+        #span4,#span5 {
+            display: none;
+        }
+
+
+    </style>
+<script>
+//    var num = 1;
+//    var str = '这是一句话';
+//    var arr = ['这是一句话','这是第二句话','这是第三句话'];//相当于仓库放什么都可以
+//    //alert(arr[1]);
+//    //alert(arr[arr.length-1]);找数组的最后一个数据
+//    arr.push('我是最后一位');//往数组的最后一位添加数据
+//    alert(arr);
+window.onload = function(){
+    var oPrev = document.getElementById('prev');
+    var oNext = document.getElementById('next');
+    var oText = document.getElementById('text');
+    var oSpan = document.getElementById('span1');
+    var oImg = document.getElementById('img1');
+
+    var oBtn1 = document.getElementById('btn1');
+    var oBtn2 = document.getElementById('btn2');
+    var oSpan4 = document.getElementById('span4');
+    var oSpan5 = document.getElementById('span5');
+
+    var arrUrl = ['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg'];
+    var arrText = ['游戏mm','人造运动员','性感美女','古装游戏美女'];
+
+    var num = 0;
+//    var onOff = true
+
+
+    //初始化
+    function fnTab(){
+    oSpan.innerHTML =num+1 + '/'+arrText.length;
+    oImg.src = arrUrl[num];
+    oText.innerHTML = arrText[num];
+    }
+    fnTab();
+
+           oBtn1.onclick = function(){
+            oSpan4.style.display = 'block';
+            oSpan5.style.display = 'none';
+          };
+
+            oBtn2.onclick = function () {
+             oSpan4.style.display = 'none';
+             oSpan5.style.display = 'block';
+            };
+
+    oPrev.onclick = function(){
+        num--;
+        if(num == -1){
+            alert('这是第一张');
+            num = arrText.length-1;
+        }
+
+        fnTab();
+    }
+    oNext.onclick = function(){
+        num++;
+        if(num == arrText.length-0){
+            alert('已经到最后一张了');
+            num = 0;
+
+        }
+
+        fnTab();
+    }
+};
+
+
+</script>
+</head>
+<body>
+<div id="anniu">
+    <input id="btn1" type="button" value="循环切换"/>
+    <input id="btn2" type="button" value="顺序切换"/></br>
+    <span id="span4">图片只能到最后一张跳到第一张切换</span>
+    <span id="span5">图片只能到最后一张或者只能到第一张切换</span>
+</div>
+<div id="content">
+    <a id="prev" href="javascript:;"><</a>
+    <a id="next" href="javascript:;">></a>
+        <p id="text">图片文字也在加载中...</p>
+    <span id="span1">数量正在计算中...</span>
+    <img id="img1" />
+</div>
+
+</body>
+</html>

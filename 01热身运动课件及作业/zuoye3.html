@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js作业</title>
+    <style>
+html{overflow: hidden}/*去掉多余的 可以用来消除滑动条*/
+ .ff li { list-style:none;float: left;text-align: center;line-height: 50px;display:block;}
+ #top{height:30px;  margin: 0 auto;position: relative;}
+ .ff li input{ position: absolute; margin-top: 32px;margin-left: 10px;}
+ .fangkuai{width: 100px;height: 100px;background: white;border: 4px solid black;position:absolute;top: 82px;left: 40px;}
+ li input{background: red;}
+ .bjfk{width: 420px;height: 350px;background: gainsboro;margin-left: 550px;margin-top: 150px;border: 12px solid cornflowerblue;padding: 30px; display: none;}
+ #fd, #fd2, #fd3, #fd4{overflow: hidden;line-height: 50px; margin-bottom: 20px;}
+ #fd h4{
+     float: left;
+     margin: 0;
+ }
+ #fd span{
+     float: left;
+     width: 50px;
+     height: 50px;
+     text-align: center;
+     color: #fff;
+     margin: 0 15px;
+ }
+ #fd span:nth-of-type(1){
+     background: red;
+ }
+ #fd span:nth-of-type(2){
+     background: orange;
+ }
+ #fd span:nth-of-type(3){
+     background: blue;
+ }
+
+
+
+ #fd2 h4{
+     float: left;
+     margin: 0;
+ }
+ #fd2 span{
+     float: left;
+     width: 50px;
+     height: 50px;
+     text-align: center;
+     color: #fff;
+     margin: 0 24px;
+ }
+ #fd2 span:nth-of-type(1){
+     background: #9d9d9d;
+ }
+ #fd2 span:nth-of-type(2){
+     background: #9d9d9d;
+ }
+ #fd2 span:nth-of-type(3){
+     background: #9d9d9d;
+ }
+
+
+
+ #fd3 h4{
+     float: left;
+     margin: 0;
+ }
+ #fd3 span{
+     float: left;
+     width: 50px;
+     height: 50px;
+     text-align: center;
+     color: #fff;
+     margin: 0 15px;
+ }
+ #fd3 span:nth-of-type(1){
+     background: #9d9d9d;
+ }
+ #fd3 span:nth-of-type(2){
+     background: #9d9d9d;
+ }
+ #fd3 span:nth-of-type(3){
+     background: #9d9d9d;
+ }
+
+
+ #fd4 h4{
+     float: left;
+     margin: 0;
+ }
+ #fd4 span{
+     float: left;
+     width: 60px;
+     height: 50px;
+     text-align: center;
+     color: #fff;
+     margin: 0 5px;
+     font-size: 14px;
+ }
+ #fd4 span:nth-of-type(1){
+     background: #0c005f;
+ }
+ #fd4 span:nth-of-type(2){
+     background: #0c005f;
+ }
+    </style>
+    <script>
+        window.onload = function(){
+            var oBtn1 = document.getElementById('bt1');
+            var oBtn2 = document.getElementById('xian');
+            var oFk = document.getElementById('fk1');
+          	var oFd = document.getElementById('fd');
+          	var oFd2 = document.getElementById('fd2');
+          	var oFd3 = document.getElementById('fd3');
+          	var oFd4 = document.getElementById('fd4');
+          	
+            oBtn1.onclick = function (){
+                oBtn2.style.display = 'block';
+            }
+            // 颜色改变
+          	var aSpan1 = oFd.getElementsByTagName('span');
+
+          	aSpan1[0].onclick = function(){
+          		oFk.style.background = 'red';
+          	}
+          	aSpan1[1].onclick = function(){
+          		oFk.style.background = 'orange';
+          	}
+          	aSpan1[2].onclick = function(){
+          		oFk.style.background = 'blue';
+          	}
+          	// 宽度改变
+          	var aSpan2 = oFd2.getElementsByTagName('span');
+
+          	aSpan2[0].onclick = function(){
+          		oFk.style.width = '200px';
+          	}
+          	aSpan2[1].onclick = function(){
+          		oFk.style.width = '300px';
+          	}
+          	aSpan2[2].onclick = function(){
+          		oFk.style.width = '400px';
+          	}
+
+          	// 高度改变
+          	var aSpan3 = oFd3.getElementsByTagName('span');
+
+          	aSpan3[0].onclick = function(){
+          		oFk.style.height = '200px';
+          	}
+          	aSpan3[1].onclick = function(){
+          		oFk.style.height = '300px';
+          	}
+          	aSpan3[2].onclick = function(){
+          		oFk.style.height = '400px';
+          	}
+
+          	// 确定和恢复
+          	var aSpan4 = oFd4.getElementsByTagName('span');
+
+          	aSpan4[0].onclick = function(){
+          		oFk.style.height = '100px';
+          		oFk.style.width = '100px';
+          		oFk.style.background = '';
+          	}
+          	aSpan4[1].onclick = function(){
+          		oBtn2.style.display = 'none';
+          	}
+          	
+
+            
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+<div id="top">
+    <ul class="ff">
+        <li><h3>请为下面的DIV设置样式:</h3></li>
+        <li><input id="bt1" type="button"  value="点击设置"/></li>
+    </ul>
+    <div class="fangkuai" id="fk1"></div>
+</div>
+
+<div class="bjfk" id="xian">
+
+        <div id="fd">
+            <h4>请选择背景颜色:</h4>
+            <span>红</span>
+            <span>黄</span>
+            <span>蓝</span>
+        </div>
+
+        <div id="fd2">
+            <h4>请选择宽(PX):</h4>
+            <span>200</span>
+            <span>300</span>
+            <span>400</span>
+        </div>
+
+    <div id="fd3">
+        <h4>请选择高(PX):</h4>
+        <span>200</span>
+        <span>300</span>
+        <span>400</span>
+    </div>
+
+    <div id="fd4">
+        <span>恢复</span>
+        <span>确定</span>
+    </div>
+</div>
+</body>
+</html>
+

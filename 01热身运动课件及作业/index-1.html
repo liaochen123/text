@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>导航条js练习</title>
+    <style>
+        li {list-style: none;}
+        .lis {list-style: none; width: 80px;height: 30px;border: 1px solid #333;position: relative;background: greenyellow;}
+        .lis a { display: block;line-height: 30px;text-align: center;text-decoration:none; color: red;}
+        ul ul {padding: 0; margin: 0;width: 80px;border: 1px solid blue;position: absolute;top: 30px;left: -1px;background: #ffb62c;display: none;}
+        ul ul li {text-align: center;line-height: 30px;}
+    </style>
+    <script>
+        /*
+         关于加载完以后再执行的..
+         onload  加载完以后执行
+         window.onload = 事情
+         img.onload   图片加载完以后执行
+         body.onload
+         */
+        /*函数是可以没有名字的就叫匿名函数function (){}*/
+        window.onload = function (){
+            var  li =document.getElementById('list');
+            var  ul =document.getElementById('ul1');
+            var  a =document.getElementById('link');
+
+            li.onmouseover = function (){/*鼠标移入的时候让他发生一件事*/
+                ul.style.display ='block';
+                a.style.background = 'yellow';
+            } ;
+            li.onmouseout =  function (){/*鼠标移出的时候让他发生一件事*/
+                ul.style.display ='none';
+                a.style.background ='#f1f1f1';
+            };
+        }
+    </script>
+</head>
+<body>
+  <ul>
+      <li id="list" class="lis">
+          <a id="link" href="">微博</a>
+          <ul id="ul1">
+              <li><a href="">私信</a></li>
+              <li><a href="">评论</a></li>
+              <li><a href="">@我们</a></li>
+          </ul>
+      </li>
+  </ul>
+</body>
+</html>

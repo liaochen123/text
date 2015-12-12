@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+
+    </style>
+    <script>
+     window.onload = function(){
+         var aBtn = document.getElementsByTagName('input');/*获取所有的input*/
+         //var that = null;//空
+         /*给三个按钮添加点击事件需要做一次循环*/
+         for(var i=0; i<aBtn.length; i++){
+//             aBtn[i].onclick = function(){
+//               //this.style.background = 'red';
+//               that = this;
+//                 fn1();
+//             };
+             aBtn[i].onclick = fn1;
+         }
+         function fn1(){
+             //that.style.background = 'blue';
+             this.style.background = 'yellow';
+         }
+     };
+
+    </script>
+</head>
+<body>
+
+<input  type="button" value="按钮1"/>
+<input  type="button" value="按钮2"/>
+<input  type="button" value="按钮3"/>
+
+</body>
+</html>

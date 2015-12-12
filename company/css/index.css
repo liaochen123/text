@@ -1,0 +1,439 @@
+html,body{
+    width: 100%;
+    height: 100%;
+
+}
+section{
+    width: 100%;
+    height: 100%;
+}
+.show1{
+    position: absolute;
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+.show2{
+    position: absolute;
+    background: url("../images/3.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+.show3{
+    position: absolute;
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+.show4{
+    position: absolute;
+    background: url("../images/3.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+.up{
+    position: absolute;
+    width: 15%;
+    height: 5%;
+    top: 2%;
+    display: block;
+    left: 42.5%;
+    -webkit-animation: shang 1.5s ease infinite;
+    z-index: 4;
+}
+.upguang{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 25.5%;
+    left: 21%;
+    z-index: 4;
+    -webkit-animation: shan 1.5s ease 0.5s infinite;
+}
+
+@-webkit-keyframes shan{
+    0% {  opacity:0;}
+    50% {  opacity:1;}
+    100% {  opacity:0;}
+}
+.downguang{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 63.5%;
+    left: 62%;
+    z-index: 4;
+    -webkit-animation: shan 1.5s ease 0.8s infinite;
+}
+.down{
+    position: absolute;
+    width: 15%;
+    height: 5%;
+    bottom: 2%;
+    display: block;
+    left: 42.5%;
+    -webkit-animation: xia 1.5s ease infinite;
+    z-index: 4;
+}
+.left{
+    position: absolute;
+    width: 9%;
+    height: 8%;
+    top: 45%;
+    display: block;
+    left: 3%;
+    -webkit-animation: left 1.5s ease 0.6s infinite;
+    z-index: 4;
+}
+.right{
+    position: absolute;
+    width: 9%;
+    height: 8%;
+    top: 45%;
+    display: block;
+    right: 3%;
+    -webkit-animation: right 1.5s ease 0.6s infinite;
+    z-index: 4;
+}
+.head{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0%;
+    z-index: 3;
+}
+.headhui{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0%;
+    z-index: 2;
+}
+.foot{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    z-index: 3;
+}
+.foothui{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    z-index: 2;
+}
+@-webkit-keyframes shang{
+    0% { -webkit-transform: translateY(50%); opacity:0;}
+    50% { -webkit-transform: translateY(0%); opacity:1;}
+    100% { -webkit-transform: translateY(-50%); opacity:0;}
+}
+@-webkit-keyframes xia{
+    0% { -webkit-transform: translateY(-50%); opacity:0;}
+    50% { -webkit-transform: translateY(0%); opacity:1;}
+    100% { -webkit-transform: translateY(50%); opacity:0;}
+}
+@-webkit-keyframes left{
+    0% { -webkit-transform: translateX(50%); opacity:0;}
+    50% { -webkit-transform: translateX(0%); opacity:1;}
+    100% { -webkit-transform: translateX(-50%); opacity:0;}
+}
+@-webkit-keyframes right{
+    0% { -webkit-transform: translateX(-50%); opacity:0;}
+    50% { -webkit-transform: translateX(0%); opacity:1;}
+    100% { -webkit-transform: translateX(50%); opacity:0;}
+}
+#jiyi{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0);
+    z-index: 10;
+
+
+}
+#weilai{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    left: 0;
+    background-color: rgba(255,255,255,0);
+    z-index: 10;
+}
+#history{
+    position: absolute;
+    color: #ffffff;
+    font-family: "microsoft yahei";
+    font-size: 1.6em;
+    top: 57%;
+    left: 34%;
+    z-index: 5;
+}
+#fuetrue{
+    position: absolute;
+    color: #ffffff;
+    font-family: "microsoft yahei";
+    font-size: 1.6em;
+    top: 33%;
+    left: 37%;
+    z-index: 5;
+}
+.juxing{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+.aboutUS{
+    position: absolute;
+    color: #ffffff;
+    font-family: "microsoft yahei";
+    font-size: 1.1em;
+    top: 90%;
+    left: 67%;
+    z-index: 10;
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    line-height: 2.5em;
+}
+.xiaoguo{
+    position: absolute;
+    color: #ffffff;
+    font-family: "microsoft yahei";
+    font-size: 1.1em;
+    top: 90%;
+    left: 5%;
+    z-index: 5;
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    line-height: 2.5em;
+}
+
+
+.aboutUS1{
+    position: absolute;
+    color: #ffffff;
+    font-family: "microsoft yahei";
+    font-size: 1.1em;
+    top:86%;
+    left: 66%;
+    z-index: 10;
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    line-height: 5.5em
+}
+#hide{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(255,255,255,0.4);
+    display: none;
+    z-index: 66;
+}
+#hide1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(255,255,255,0.4);
+    display: none;
+    z-index: 66;
+}
+.hideDiv{
+    position: absolute;
+    height: 40%;
+    width: 96%;
+    top: 30%;
+    left: 2%;
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 1em;
+    border: 1px solid #ffffff;
+    outline: none;
+    color: #ff4f19;
+    font-family: "Microsoft YaHei",;
+}
+.hideDiv img{
+    position: absolute;
+    width: 43%;
+    height: 60%;
+    top: 30%;
+    left: 7%;
+}
+.hideDiv .zi{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+/*正方形容器*/
+.content{
+    width: 84%;
+    height: 53%;
+    /*margin-top: 50px;*/
+    /*background-color: rgba(255,255,255,0.6);*/
+    position: absolute;
+    top: 25%;
+    left: 3%;
+    overflow: hidden;
+
+}
+/*3条长方形*/
+.divList{
+    width: 100%;
+    height: 25%;
+    /*background-color: rgba(255,255,255,0.3);*/
+    color: #ffffff;
+    margin-bottom: 8%;
+    margin-top: 5.5%;
+    margin-left: 2.4%;
+}
+@media screen and (max-height:480px) {
+    .divList{
+        width: 100%;
+        height: 25%;
+        /*background-color: rgba(255,255,255,0.3);*/
+        color: #ffffff;
+        margin-bottom: 7%;
+        margin-top: 5%;
+        margin-left: 1.4%;
+    }
+}
+.divList2,.divList3{
+    margin-top: 3%;
+}
+
+.divList ul{
+    padding: 0;
+    margin: 0;
+    /*background-color: #da4453;*/
+    width: 300%;
+    height: 100%;
+
+}
+.divList ul li{
+    list-style: none;
+    margin-right: 1.3%;
+    margin-bottom: 1%;
+    width: 9%;
+    height: 100%;
+    /*background-color: rgba(255,255,255,0.4);*/
+    /*display: inline-block;*/
+    float: left;
+}
+.liList{
+    margin-left: 5px;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1em;
+}
+.mingcheng{
+    position: absolute;
+    display: inline-block;
+    width: 5em;
+    height: 2em;
+    margin-top: 20%;
+    margin-left: -26%;
+}
+@media screen and (max-height:480px) {
+    .mingcheng{
+        position: absolute;
+        display: inline-block;
+        width: 5em;
+        height: 2em;
+        margin-top: 17%;
+        margin-left: -26%
+    }
+}
+/*左滑动*/
+.marginL{
+    -webkit-animation: marginL .7s linear 1;
+}
+@-webkit-keyframes marginL{
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -33%;
+    }
+}
+/*右滑动*/
+.marginR{
+    -webkit-animation: marginR .7s linear 1;
+}
+@-webkit-keyframes marginR{
+    0%{
+        margin-left: -33%;
+    }
+    100%{
+        margin-left: 0;
+    }
+}
+.swipe{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 5;
+    top: 40%;
+    left: 50%;
+    -webkit-animation: left 1.5s ease 0.6s infinite;
+}
+.swipe1{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 5;
+    top: 40%;
+    left: 50%;
+    -webkit-animation: left 1.5s ease 0.6s infinite;
+}
+.swipe2{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 5;
+    top: 40%;
+    left: 50%;
+    -webkit-animation: left 1.5s ease 0.6s infinite;
+}
+#box1 a{
+    width: 100%;
+    height: 100%;
+}
+.kehu{
+
+    font-size: 1.6em;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.kehu span{
+    font-size: 0.8em;
+    margin-left: 5%;
+    margin-top: 5%;
+    display: block;
+}
+.huoban{
+    font-size: 1.6em;
+    margin-left: 5%;
+    margin-top: 32%;
+}
+.huoban span{
+    font-size: 0.8em;
+    margin-left: 5%;
+    margin-top: 5%;
+    display: block;
+}

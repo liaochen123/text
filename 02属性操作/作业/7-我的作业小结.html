@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>属性操作作业1</title>
+    <style>
+#div1{
+    width:240px;
+    height: 200px;
+    border: 1px solid #333;
+    background: #f1f1f1;
+    padding: 10px;
+}
+    </style>
+
+    <script>
+    window.onload = function(){
+        var oDiv = document.getElementById('div1');
+        var oSpan = document.getElementById('span1');
+        var oText = document.getElementById('text1');
+        var oBtn = document.getElementById('btn1');
+        var b = true;
+
+        oBtn.onclick = function(){
+            //添加，把原来的东西和新的东西+一起
+            //oDiv.innerHTML = oDiv.innerHTML + oSpan.innerHTML + oText.value + '<br/>';
+
+            /*还有一个方法是一样的*/
+            oDiv.innerHTML += oSpan.innerHTML + oText.value + '<br/>';
+
+            oText.value = '';
+
+        };
+
+        oSpan.onclick = function() {
+           if(b){
+               oSpan.innerHTML = '课堂:';
+           }
+            else{
+               oSpan.innerHTML = '妙味:';
+           }
+                b = !b;
+        }
+    }
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+<span id="span1">妙味:</span>
+<input id="text1" type="text"/>
+<input id="btn1" type="button" value="提交"/>
+</body>
+</html>

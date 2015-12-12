@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js作业</title>
+    <style>
+html{overflow: hidden}/*去掉多余的 可以用来消除滑动条*/
+ .ff li { list-style:none;float: left;text-align: center;line-height: 50px;display:block;}
+ #top{height:30px;  margin: 0 auto;position: relative;}
+ .ff li input{ position: absolute; margin-top: 32px;margin-left: 10px;}
+ .fangkuai{width: 100px;height: 100px;background: white;border: 4px solid black;position:absolute;top: 82px;left: 40px;}
+ li input{background: red;}
+ .bjfk{width: 420px;height: 270px;background: gainsboro;margin-left: 550px;margin-top: 150px;border: 12px solid cornflowerblue;padding: 30px; display: none;}
+ #fd{width: 100%;height: 100%;line-height: 50px;}
+ #fd h4{
+     float: left;
+     margin: 0;
+ }
+ #fd input{
+     float: left;
+     width: 50px;
+     height: 50px;
+     text-align: center;
+     color: #fff;
+     margin: 0 24px;
+ }
+ #fd input:nth-of-type(1){
+     background: red;
+ }
+ #fd input:nth-of-type(2){
+     background: orange;
+ }
+ #fd input:nth-of-type(3){
+     background: blue;
+ }
+
+
+ #fd2{width: 100%;
+     height: 100%;
+     line-height: 50px;
+     position: absolute;
+     top: 320px;
+     left: 616px;
+ }
+ #fd2 h4{
+     float: left;
+     margin: 0;
+ }
+ #fd2 input{
+     float: left;
+     width: 50px;
+     height: 50px;
+     text-align: center;
+     color: #fff;
+     margin: 0 24px;
+ }
+ #fd2 input:nth-of-type(1){
+     background: #9d9d9d;
+ }
+ #fd2 input:nth-of-type(2){
+     background: #9d9d9d;
+ }
+ #fd2 input:nth-of-type(3){
+     background: #9d9d9d;
+ }
+
+
+ #fd3{width: 100%;
+     height: 100%;
+     line-height: 50px;
+     position: absolute;
+     top: 400px;
+     left: 616px;
+ }
+ #fd3 h4{
+     float: left;
+     margin: 0;
+ }
+ #fd3 input{
+     float: left;
+     width: 50px;
+     height: 50px;
+     text-align: center;
+     color: #fff;
+     margin: 0 24px;
+ }
+ #fd3 input:nth-of-type(1){
+     background: #9d9d9d;
+ }
+ #fd3 input:nth-of-type(2){
+     background: #9d9d9d;
+ }
+ #fd3 input:nth-of-type(3){
+     background: #9d9d9d;
+ }
+
+
+ #fd4{width: 100%;
+     height: 100%;
+     line-height: 30px;
+     position: absolute;
+     top: 480px;
+     left: 800px;
+
+ }
+ #fd4 h4{
+     float: left;
+     margin: 0;
+ }
+ #fd4 input{
+     float: left;
+     width: 60px;
+     height: 30px;
+     text-align: center;
+     color: #fff;
+     margin: 0 5px;
+     font-size: 14px;
+ }
+ #fd4 input:nth-of-type(1){
+     background: #0c005f;
+ }
+ #fd4 input:nth-of-type(2){
+     background: #0c005f;
+ }
+    </style>
+    <script>
+        window.onload = function(){
+            var oBtn1 = document.getElementById('bt1');
+            var oBtn2 = document.getElementById('xian');
+            var oFk = document.getElementById('fk1');
+            var oFd = document.getElementById('h');
+            var oHu = document.getElementById('hu');
+            var oNb = document.getElementById('la');
+            var oKa = document.getElementById('kuan1');
+            var oKb = document.getElementById('kuan2');
+            var oKc = document.getElementById('kuan3');
+            var oGa = document.getElementById('gao1');
+            var oGb = document.getElementById('gao2');
+            var oGc = document.getElementById('gao3');
+            var oHf = document.getElementById('hf');
+            var oDn = document.getElementById('qd');
+
+            oBtn1.onclick = function (){
+                oBtn2.style.display = 'block';
+            };
+            oFd.onclick = function (){
+                oFk.style.background = 'red';
+            };
+            oHu.onclick = function (){
+                oFk.style.background = 'orange';
+            };
+            oNb.onclick = function (){
+                oFk.style.background = 'blue';
+            };
+            oKa.onclick = function(){
+                oFk.style.width = '200px';
+            };
+            oKb.onclick = function(){
+                oFk.style.width = '300px';
+            };
+            oKc.onclick = function(){
+                oFk.style.width = '400px';
+            };
+            oGa.onclick = function(){
+                oFk.style.height = '200px';
+            };
+            oGb.onclick = function(){
+                oFk.style.height = '300px';
+            };
+            oGc.onclick = function(){
+                oFk.style.height = '400px';
+            };
+            oHf.onclick = function(){
+                oFk.style.width = '100px';
+                oFk.style.height = '100px';
+                oFk.style.background = '';
+            };
+            oDn.onclick = function(){
+                oBtn2.style.display = 'none';
+            };
+
+        }
+
+    </script>
+</head>
+<body>
+<div id="top">
+    <ul class="ff">
+        <li><h3>请为下面的DIV设置样式:</h3></li>
+        <li><input id="bt1" type="button"  value="点击设置"/></li>
+    </ul>
+    <div class="fangkuai" id="fk1"></div>
+</div>
+
+<div class="bjfk" id="xian">
+        <div id="fd">
+            <h4>请选择背景颜色:</h4>
+            <input id="h" type="button" value="红"/>
+            <input id="hu" type="button" value="黄"/>
+            <input id="la" type="button" value="蓝"/>
+        </div>
+
+        <div id="fd2">
+            <h4>请选择宽(PX):</h4>
+            <input id="kuan1" type="button" value="200"/>
+            <input id="kuan2" type="button" value="300"/>
+            <input id="kuan3" type="button" value="400"/>
+        </div>
+
+    <div id="fd3">
+        <h4>请选择高(PX):</h4>
+        <input id="gao1" type="button" value="200"/>
+        <input id="gao2" type="button" value="300"/>
+        <input id="gao3" type="button" value="400"/>
+    </div>
+
+    <div id="fd4">
+        <input id="hf" type="button" value="恢复"/>
+        <input id="qd" type="button" value="确定"/>
+    </div>
+</div>
+</body>
+</html>
+

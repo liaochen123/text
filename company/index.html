@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/screen.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="loading/loading.css"/>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/imagePreloading1.js"></script>
+</head>
+<body>
+<!--预加载-->
+<div id="loading" class="loading">
+    <div class="loadbox">
+        <div class="loadlogo"></div>
+        <div class="loadbg"></div>
+    </div>
+</div>
+    <div id="page">
+        <section>
+            <audio id="music" style="position:absolute; display:none">
+                <source src="video/swipe.wav">
+                您的浏览器不支持 audio 元素。
+            </audio>
+            <audio id="clickmusic" style="position:absolute; display:none">
+                <source src="video/dianji.mp3">
+                您的浏览器不支持 audio 元素。
+            </audio>
+            <div id="viewport-shadow">
+                <!--<a href="#" id="prev" title="go to the next slide"></a>-->
+                <!--<a href="#" id="next" title="go to the next slide"></a>-->
+                <div id="viewport">
+                    <div id="box">
+                        <figure class="slide show1">
+                            <div id="volbtn" style="position:fixed; z-index:99; left:88%; top:5%; background-image:url(images/voicechange.png); background-position:70px;  width:80px; height:50px;" onClick="volchange()"></div>
+                            <audio autoplay="autoplay" id="bgmusic" style="position:absolute; display:none">
+                                <source src="video/bg.mp3">
+                                您的浏览器不支持 audio 元素。
+                            </audio>
+                            <img class="head" src="images/2_01(2).jpg">
+                            <img class="headhui" src="images/2_01.jpg">
+                            <img class="foot" src="images/2_02(2).jpg">
+                            <img class="foothui" src="images/2_02.jpg">
+                            <img class="upguang" src="images/guang.png" alt="upguang"/>
+                            <img class="downguang" src="images/guang.png" alt="downguang"/>
+                            <div id="jiyi">
+                                <p id="history">往昔记忆</p>
+                            </div>
+                            <div id="weilai">
+                                <p id="fuetrue">精彩未来</p>
+                            </div>
+                        </figure>
+                        <figure class="slide show4">
+                            <!--<img class="up" src="images/up.png" alt="up"/>-->
+                            <img class="down" src="images/down.png" alt="down"/>
+                            <img class="swipe1" src="images/Swipe_Left.png" alt=""/>
+                            <!--<div id="iSlider-effect-wrapper1">-->
+                                <!--<div id="animation-effect1" class="iSlider-effect"></div>-->
+                            <!--</div>-->
+                            <div id="viewport-shadow1">
+                                <div id="viewport1">
+                                    <div id="box1">
+                                        <figure class="slide">
+                                            <a href="http://www.ei-marketing.cn:8080/goOver/starbucks/index.html"><img src="images/2_1.jpg"></a>
+                                        </figure>
+                                        <figure class="slide">
+                                            <a href="http://www.ei-marketing.cn:8080/goOver/dellGame/page/main2.jsp"><img src="images/4.jpg"></a>
+                                        </figure>
+                                        <figure class="slide">
+                                            <a href="http://www.ei-marketing.cn:8080/goOver/dellGame/page/activity/index1.jsp"><img src="images/5.jpg"></a>
+                                        </figure>
+                                        <figure class="slide">
+                                            <a href="http://www.ei-marketing.cn:8080/goOver/dellWechat/pages/index.jsp"><img src="images/6.jpg"></a>
+                                        </figure>
+                                        <figure class="slide">
+                                            <a href="http://www.ei-marketing.cn:8080/goOver/wbs/index.html"><img src="images/7.jpg"></a>
+                                        </figure>
+                                        <figure class="slide">
+                                            <a href="http://www.ei-marketing.cn:8080/goOver/kohler/home.html"><img src="images/8.jpg"></a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="aboutUS1">关于我们</p>
+                            <div id="hide1">
+                                <div class="hideDiv">
+                                    <img class="zi" src="images/zi.png">
+                                    <img src="images/erweima.png" alt=""/>
+                                </div>
+                            </div>
+                        </figure>
+                        <figure class="slide show2">
+                            <img class="up" src="images/up.png" alt="up"/>
+                            <!--<img class="down" src="images/down.png" alt="down"/>-->
+                            <!--<img class="left" src="images/left.png" alt="left"/>-->
+                            <!--<img class="right" src="images/right.png" alt="right"/>-->
+                            <img class="swipe2" src="images/Swipe_Left.png" alt=""/>
+                            <div id="viewport-shadow2">
+                                <div id="viewport2">
+                                    <div id="box2">
+                                        <figure class="slide">
+                                            <a href="#"><img src="texiao/te1/images/dell.jpg"></a>
+                                        </figure>
+                                        <figure class="slide">
+                                            <img src="texiao/te1/images/AirAsia.jpg">
+                                        </figure>
+                                        <figure class="slide">
+                                            <img src="texiao/te1/images/baoma.jpg">
+                                        </figure>
+                                        <figure class="slide">
+                                            <img src="texiao/te1/images/sanxing.jpg">
+                                        </figure>
+                                        <figure class="slide">
+                                            <img src="texiao/te1/images/starbreak.jpg">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="xiaoguo" onclick="window.location.href='jiuGongGe.html'">效果集锦</p>
+                            <p class="aboutUS">关于我们</p>
+                            <div id="hide">
+                                <div class="hideDiv">
+                                    <img class="zi" src="images/zi.png">
+                                    <img src="images/erweima.png" alt=""/>
+                                </div>
+                            </div>
+                        </figure>
+                        <!--<figure class="slide">-->
+                        <!--<img src="img/finding-the-key.jpg">-->  
+                        <!--</figure>-->
+                        <!--<figure class="slide">-->
+                        <!--<img src="img/lets-get-out-of-here.jpg">-->
+                        <!--</figure>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+    <script src="js/box-slider.jquery.js"></script>
+    <script src="js/box-slider-fx-scroll-3d.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="js/main.js"></script>
+<script>
+
+//    $('body').on("swipeUp",function(){
+//        if($(".show3").css('z-index')==2){
+//            alert("ok");
+//        }
+//
+//    })
+$('.show2').on("swipeUp",function(){
+    location.href="jiuGongGe.html";
+
+})
+</script>
+</body>
+</html>

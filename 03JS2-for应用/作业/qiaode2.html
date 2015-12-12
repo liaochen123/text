@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>练习敲的</title>
+    <script>
+    /*往body里面添加东西*/
+        window.onload = function(){
+            //document.title = 123;
+            //document.body.innerHTML = 'abc';
+
+            //获取一堆按钮
+            var aBtn = document.getElementsByTagName('input');
+
+            document.body.innerHTML = '<input type="button" value="按钮" /> <input type="button" value="按钮" /> <input type="button" value="按钮" />';
+
+           // alert(aBtn.length);
+
+            //给获取的第一个按钮input加上一个点击事件
+            aBtn[0].onclick = function(){
+               alert(1);
+            };
+            aBtn[1].onclick = function(){
+                alert(1);
+            };
+            aBtn[2].onclick = function(){
+                alert(1);
+            };
+
+        }
+//重复执行某些代码
+        //每一次执行的时候，有个数字在变化
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

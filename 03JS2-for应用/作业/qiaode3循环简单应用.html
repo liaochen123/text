@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>练习敲的</title>
+    <style>
+        li{
+            list-style: none;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+        var oUl = document.getElementById('list');
+        var aLi = oUl.getElementsByTagName('li');/*找一堆li加一个前缀oUl.*/
+       // var arr = ['今天','明天','后天']
+
+            for(var i =0; 0<aLi.length;i++){
+                //aLi[i].innerHTML = arr[i];//添加
+                aLi[i].onclick = function(){
+                    alert(1);
+                }
+            }
+
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+<ul id="list">
+    <li><input type="button" value="按钮1"/></li></br>
+    <li><input type="button" value="按钮2"/></li></br>
+    <li><input type="button" value="按钮3"/></li></br>
+</ul>
+
+</body>
+</html>

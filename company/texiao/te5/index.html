@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=640,user-scalable=no,target-densityDpi=device-dpi">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>页面滑动</title>
+<meta name="viewport" content="width=deive-width,initial-scale=1.0,user-scalable=no">
+<link rel="stylesheet" href="css/style.css" />
+    <style type="text/css">
+            /*div另外加的背景图*/
+        .iSlider-effect{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 6;
+            background:url("../te1/images/cubeBg.jpg") no-repeat;
+            background-size: cover;
+            perspective:800px;
+        }
+    </style>
+
+<script src="js/islider.js"></script>
+<script src="js/plugins/islider_desktop.js"></script>
+
+</head>
+<body>
+<div id="dom-effect" class="iSlider-effect"></div>
+
+<script>
+
+var domList = [
+{
+	'height' : 393,
+	'width' : 630,
+	'content' : '<div><h1>Home</h1><h2>This is home page</h2><p>home is pretty awsome</p><img src="../te1/images/AirAsia.jpg" style="width: 11em;height: 16em"><div>'
+},{
+	'height' : 393,
+	'width' : 630,
+	'content' : '<div><h1>Page1</h1><h2>This is page1</h2><p>page1 is pretty awsome</p><img src="../te1/images/sanxing.jpg" style="width: 11em;height: 16em"><div>'
+},{
+	'height' : 393,
+	'width' : 630,
+	'content' : '<div><h1>Page2</h1><h2>This is Page2</h2><p>Page2 is pretty awsome</p><img src="../te1/images/starbreak.jpg" style="width:11em;height: 16em"><div>'
+},{
+	'height' : 393,
+	'width' : 630,
+	'content' : '<div><h1>Page3</h1><h2>This is page3</h2><p>page3 is pretty awsome</p><img src="../te1/images/baoma.jpg" style="width: 11em;height: 16em"><div>'
+}
+];
+
+//滚动dom
+var islider4 = new iSlider({
+	data: domList,
+	dom: document.getElementById("dom-effect"),
+	type: 'dom',
+	animateType: 'default',
+	isAutoplay: true,
+	isLooping: true
+});
+islider4.bindMouse();
+
+$(function(){
+
+    var $li = $('li');
+    var desH = 1008;
+    var desW = 640;
+    var viewHeight = $(window).height();
+    var viewWidth = $(window).width();
+
+    function init(){
+        $li.css('transform','scale('+( viewHeight/desH )+')');
+    }
+
+    init();
+
+});
+
+
+</script>
+
+</body>
+</html>

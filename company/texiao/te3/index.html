@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=640,user-scalable=no,target-densityDpi=device-dpi">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <title>九宫格图片轮播效果</title>
+    <meta name="viewport" content="width=deive-width,initial-scale=1.0,user-scalable=no">
+<link rel="stylesheet" href="css/style.css" />
+    <style type="text/css">
+            /*div另外加的背景图*/
+        #iSlider-effect-wrapper{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 6;
+            background:url("../te1/images/cubeBg.jpg") no-repeat;
+            background-size: cover;
+            perspective:800px;
+        }
+    </style>
+
+<script src="js/islider.js"></script>
+<!--<script src="js/plugins/islider_desktop.js"></script>-->
+
+</head>
+<body>
+
+
+<div id="iSlider-effect-wrapper">
+    <div id="animation-effect" class="iSlider-effect"></div>
+</div>
+
+
+<script>
+var picList = [
+{
+	width: 150,
+	height: 207,
+	content: "../te1/images/AirAsia.jpg"
+},
+{
+	width: 150,
+	height: 207,
+	content: "../te1/images/baoma.jpg"
+},
+{
+	width: 150,
+	height: 207,
+	content: "../te1/images/sanxing.jpg"
+},
+{
+	width: 150,
+	height: 207,
+	content:"../te1/images/starbreak.jpg"
+}
+];
+
+
+//所有的动画效果
+var islider1 = new iSlider({
+	data: picList,
+	dom: document.getElementById("animation-effect"),
+	duration: 2000,
+	animateType: 'default',
+	isAutoplay: true,
+	isLooping: true
+});
+islider1.bindMouse();
+
+$(function(){
+
+    var $li = $('li');
+    var desH = 1008;
+    var desW = 640;
+    var viewHeight = $(window).height();
+    var viewWidth = $(window).width();
+
+    function init(){
+        $li.css('transform','scale('+( viewHeight/desH )+')');
+    }
+
+    init();
+
+});
+</script>
+
+</body>
+</html>

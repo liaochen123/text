@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋转翻页动画</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <script src="js/zepto.min.js"></script>
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #page1,#page2,#page3,#page4,#page5{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+        }
+        #page1{
+            background-color: #da95a3;
+        }
+        #page2{
+            background-color: #a3bc99;
+        }
+        #page3{
+            background-color: #daaab9;
+        }
+        #page4{
+            background-color: #85babc;
+        }
+        #page5{
+            background-color: #c1bfda;
+        }
+
+        #up{
+            position: absolute;
+            width: 20%;
+            left: 40%;
+            bottom: 6%;
+            -webkit-animation: upShow 1.5s linear infinite;
+        }
+        @-webkit-keyframes upShow{
+            0%{
+                bottom: 1%;
+                opacity: 1;
+
+            }
+            100%{
+                bottom: 6%;
+                opacity: 0;
+            }
+        }
+
+        /*页面隐藏*/
+        .pageHide{
+            -webkit-animation: pageHide .5s linear 1;
+        }
+        @-webkit-keyframes pageHide{
+            0%{
+                -webkit-transform:rotate(0deg);
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            100%{
+                -webkit-transform:rotate(360deg);
+                left: 100%;
+                width: 0;
+                height: 0;
+            }
+        }
+        /*页面显示*/
+        .pageShow{
+            -webkit-animation: pageShow .5s linear 1;
+        }
+        @-webkit-keyframes pageShow{
+            0%{
+                -webkit-transform:rotate(0deg);
+                left: 100%;
+                width: 0;
+                height: 0;
+            }
+            100%{
+                -webkit-transform:rotate(-360deg);
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        div img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="page1">
+        <img src="../te1/images/baoma.jpg" alt=""/>
+    </div>
+    <div id="page2">
+        <img src="../te1/images/AirAsia.jpg" alt=""/>
+    </div>
+    <div id="page3">
+        <img src="../te1/images/starbreak.jpg" alt=""/>
+    </div>
+    <div id="page4">
+        <img src="../te1/images/sanxing.jpg" alt=""/>
+    </div>
+    <img id="up" src="images/up.png" alt=""/>
+
+    <script>
+
+        // 设备宽度
+        var windowW = $(window).width();
+        // 设备高度
+        var windowH = $(window).height();
+//        页面数
+        var pageNumber = 5;
+        /**
+         * 滑动事件
+         * swipeLeft,向左滑
+         * swipeRight,右滑
+         * swipeUp,上滑
+         * swipeDown，下滑
+         */
+
+        document.addEventListener('touchmove',function(event){
+            event.preventDefault(); },false);
+
+//        向上滑动翻页
+        /*$(window).swipeUp(function(){可以换成.click点击向上的箭头来触发这个事件。因为用了向上滑动切换场景的页面*/
+        $(window).click(function(){
+//            alert(pageNumber);
+            if(pageNumber>1){
+                $('#page'+pageNumber+'').addClass('pageHide').removeClass('pageShow');
+                setTimeout(function(){
+                    $('#page'+pageNumber+'').css({left: '100%'});
+                    pageNumber--;
+                },500);
+            }
+        });
+//      向下滑动翻页
+        $(window).swipeDown(function(){
+
+//            alert(pageNumber);
+            if(pageNumber<5) {
+                pageNumber++;
+                $('#page' + pageNumber + '').addClass('pageShow').removeClass('pageHide');
+                setTimeout(function () {
+                    $('#page' + pageNumber + '').css({left: '0'});
+                }, 500);
+            }
+        });
+
+        /*------------------------------------------------------------------------------------------------------------------*/
+        /*滑动的时候切换一个页面*/
+        var xx,yy,XX,YY,swipeX,swipeY ;
+        document.addEventListener('touchstart',function(event){
+            xx = event.targetTouches[0].screenX ;
+            yy = event.targetTouches[0].screenY ;
+
+        });
+        document.addEventListener('touchmove',function(event){
+            XX = event.targetTouches[0].screenX ;
+            YY = event.targetTouches[0].screenY ;
+            if((YY-yy)<0&& (Math.abs(XX-xx)<Math.abs(YY-yy)))
+            {
+                /*跳转的地址-通过服务器地址传送*/
+                window.location.href="../../jiuGongGe.html";
+            }
+        });
+        /*滑动的时候切换一个页面*/
+
+        /*------------------------------------------------------------------------------------------------------------------*/
+    </script>
+</body>
+</html>

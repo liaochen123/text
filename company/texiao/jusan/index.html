@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+        #two{
+            margin: 0 auto;
+            width: 394px;
+            height: 630px;
+            position: relative;
+            margin-top: 100px;
+            z-index: 1000;
+            overflow: hidden;
+        }
+		#two img{
+		    width: 320px;
+            height: 480px;
+		}
+        #two div{
+            width: 300px;
+            height: 10px;
+            background-image: url("sanxing.png");
+            position: absolute;
+            opacity: 0;
+            background-size: 400px 400px;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="点点试试" onclick="onone()">
+
+
+<div id="two">
+
+
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+
+    var arr = new Array();
+
+    $(function(){
+        trun(60);
+        onone();
+        $("#two").click(function(){
+            onfun();
+        });
+    });
+
+    function trun(r){
+        for(var i=0;i<r;i++){
+            $("#two").append("<div></div>");
+        }
+    }
+
+    function onone(){
+        var obj = $("#two div");
+
+        for(var x=0;x<30;x++){
+            for(var j=0;j<2;j++){
+                $(obj[2*x+j]).css({display:"inline-block"});
+                $(obj[2*x+j]).animate({
+                    backgroundPositionY:-x*10+"px",
+                    backgroundPositionX:-j*300+"px",
+                    top:x*10+"px",
+                    left:j*300+"px",
+                    opacity:1
+                },700);
+                if(parseInt(Math.random()%2)==0){
+                    arr.push(parseInt(Math.random()*200)+"px");
+                    arr.push(-parseInt(Math.random()*200)+"px");
+                }if(parseInt(Math.random()%3)==0){
+                    arr.push(parseInt(Math.random()*200)+"px");
+                    arr.push(-parseInt(Math.random()*200)+"px");
+                }if(parseInt(Math.random()%4)==0){
+                    arr.push(parseInt(Math.random()*200)+"px");
+                    arr.push(parseInt(Math.random()*200)+"px");
+                }else{
+                    arr.push(-parseInt(Math.random()*200)+"px");
+                    arr.push(-parseInt(Math.random()*200)+"px");
+                }
+            }
+        }
+        $("#two input").css({display:"inline-block"});
+        $("#two input").animate({
+            opacity:1
+        },1000);
+    }
+
+    function onfun(){
+        var obj = $("#two div");
+        var obj2 = $("#two input");
+        var bernum=0;
+        $(obj2).animate({
+            opacity:0
+        },500,function(){
+            $(obj2).css({display:"none"});
+        });
+        for(var x=0;x<30;x++){
+            for(var j=0;j<2;j++){
+                $(obj[2*x+j]).animate({
+                    top:arr[2*x+j],
+                    left:arr[2*x+j+1],
+                    opacity:0
+                },500,function(){
+//                        $(obj).css({display:"none"});
+                    $(this).css({display:"none"});
+                });
+                bernum++;
+            }
+        }
+        console.log(arr);
+        arr=[""];
+    }
+    /*------------------------------------------------------------------------------------------------------------------*/
+    /*滑动的时候切换一个页面*/
+    var xx,yy,XX,YY,swipeX,swipeY ;
+    document.addEventListener('touchstart',function(event){
+        xx = event.targetTouches[0].screenX ;
+        yy = event.targetTouches[0].screenY ;
+
+    });
+    document.addEventListener('touchmove',function(event){
+        XX = event.targetTouches[0].screenX ;
+        YY = event.targetTouches[0].screenY ;
+        if((YY-yy)<0&& (Math.abs(XX-xx)<Math.abs(YY-yy)))
+        {
+            /*跳转的地址-通过服务器地址传送*/
+            window.location.href="../../jiuGongGe.html";/*相对地址*/
+        }
+    });
+    /*滑动的时候切换一个页面*/
+    /*------------------------------------------------------------------------------------------------------------------*/
+
+</script>
+</html>

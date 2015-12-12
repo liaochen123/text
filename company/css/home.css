@@ -1,0 +1,58 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#content{
+    width: 100%;
+    height: 100%;
+    background: url("../images/1.2.jpg") 100% no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    display: none;
+}
+#thisImg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.thisImg{
+    -webkit-animation: thisImg-show 2s linear 1;
+}
+
+/*圆圈旋转*/
+@-webkit-keyframes thisImg-show{
+    0%{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    100%{
+        width: 130%;
+        left: -19%;
+        height: 130%;
+        top: -7%;
+    }
+}
+
+
+.push{
+    width: 55px;
+    height: 75px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    display: none;
+    -webkit-animation: shang 1.5s ease  infinite;
+}
+@-webkit-keyframes shang{
+    0% { -webkit-transform: translateY(30%); opacity:0;}
+    50% { -webkit-transform: translateY(0%); opacity:1;}
+    100% { -webkit-transform: translateY(-30%); opacity:0;}
+}

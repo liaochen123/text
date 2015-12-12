@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>属性操作作业2</title>
+    <style>
+.red {
+     width: 300px;
+     background: red;
+     padding: 20px;
+     color: yellow;
+     border: 10px solid #ccc;
+ }
+.yellow {
+    width: 500px;
+    background: yellow;
+    padding: 20px;
+    color: red;
+    border: 20px solid #444;
+}
+    </style>
+
+    <script>
+        window.onload = function(){
+            var oP= document.getElementById('p1');
+            var oBtn1= document.getElementById('btn1');
+            var oBtn2= document.getElementById('btn2');
+            var oBtn3= document.getElementById('btn3');
+            var oBtn4= document.getElementById('btn4');
+            var num = 15;/*建一个变量*/
+
+            oBtn2.onclick = function(){
+                /*num = num + 1;让它等于它自己加1,也可以等于num += 2；num ++ ；每一次递增一个次*/
+               num ++;
+                oP.style.fontSize = num +'px';
+            };
+            oBtn1.onclick = function(){
+                num --;
+                oP.style.fontSize = num + 'px';
+            };
+            oBtn3.onclick = function(){
+               /* oP.style.width = '300px';
+                oP.style.background = 'red';
+                oP.style.padding = '20px';
+                oP.style.color = 'yellow';
+                oP.style.border = '10px solid #ccc';
+                此处省略，用以下添加class的方法写；
+                */
+                oP.className = 'red';
+            };
+            oBtn4.onclick = function(){
+
+                oP.className = 'yellow';
+            };
+
+
+        }
+    </script>
+</head>
+<body>
+
+<input id="btn1" type="button" value="-"/>
+<input id="btn2" type="button" value="+"/>
+<input id="btn3" type="button" value="红色"/>
+<input id="btn4" type="button" value="黄色"/>
+<p id="p1">孙忠怀表示，从大环境上看，中国网络视听行业总体发展态势良好，全行业继续保持高速。这样的增长源于多方面的推动。内容上，视频网站内容高度多元化，数量巨大内容丰富，整体行业在版权以及出品的作品数量大，多元化。腾讯视频在同样的趋势下，也展现出高度多元化。</p>
+
+</body>
+</html>

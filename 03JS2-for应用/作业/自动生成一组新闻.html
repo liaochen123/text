@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <script>
+
+        window.onload = function(){
+            var oBtn = document.getElementById('btn1');
+            var oUl = document.getElementById('list');
+            var arr = [
+                '政知圈注意到孟扬是目前的国办副秘书长中唯',
+                '政知圈注意到孟扬是目前的国办副秘书长中唯',
+                '政知圈注意到孟扬是目前的国办副秘书长中唯',
+                '政知圈注意到孟扬是目前的国办副秘书长中唯',
+                '政知圈注意到孟扬是目前的国办副秘书长中唯'
+            ];
+
+            var onOff = true;
+            oBtn.onclick = function(){
+                //oBtn.disabled = true;/*当你点击下去的时候让按钮的属性来一个掐断只出现一次而不是5次*/
+                //oBtn.style.display = 'none';/**/
+                //oUl.innerHTML = '';/*清空，也可以只显示点击出一次性能会差一点*/
+                //还可以用判断申明一个var onOff = true;
+        if(onOff){
+            // onOff = false;OK的
+                for(var  i = 0; i<arr.length;i++){
+                    oUl.innerHTML += '<li>'+arr[i]+'</li>';
+                }
+           // onOff = false;OK的
+              }
+            };
+        };
+
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="按钮自动生成5条新闻"/>
+<ul id="list"></ul>
+
+
+</body>
+</html>
